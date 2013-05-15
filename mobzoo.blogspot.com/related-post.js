@@ -81,7 +81,7 @@ while (i < relatedTitles.length && i < 20 && i<maxresults) {
 document.write('<a style="text-decoration:none;padding:0;float:left;');
 if(i!=0) document.write('border-left:solid 0.5px #ffffff;"');
 else document.write('"');
-document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;box-shadow:0 1px 1px rgb(238, 238, 238);border-radius:2px;" src="'+thumburl[r]+'"/><br/><div style="height:60px;line-height:1.45;text-decoration:none !important;display:block; margin: 3px 0pt 0pt; padding: 5px 5px 0; font-style: normal; font-variant: normal; max-height:55px; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
+document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;box-shadow:0 1px 1px rgb(238, 238, 238);border-radius:2px;" src="'+thumburl[r]+'"/><br/><div style="width:130px;height:60px;line-height:1.45;text-decoration:none !important;display:block; margin: 3px 0pt 0pt; padding: 5px 0 0; font-style: normal; font-variant: normal; max-height:55px; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
 i++;
 
