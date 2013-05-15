@@ -18,7 +18,7 @@ if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!=""))
 
 }
 
-if(relatedTitles[relatedTitlesNum].length>35) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 35)+"...";
+if(relatedTitles[relatedTitlesNum].length>120) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 120)+"...";
 for (var k = 0; k < entry.link.length; k++) {
 if (entry.link[k].rel == 'alternate') {
 relatedUrls[relatedTitlesNum] = entry.link[k].href;
@@ -81,7 +81,7 @@ while (i < relatedTitles.length && i < 20 && i<maxresults) {
 document.write('<a style="text-decoration:none;padding:5px;float:left;');
 if(i!=0) document.write('border-left:solid 0.5px #ffffff;"');
 else document.write('"');
-document.write(' href="' + relatedUrls[r] + '"><img style="width:150px;height:150px;box-shadow:0 1px 1px rgb(238, 238, 238);border-radius:2px;" src="'+thumburl[r]+'"/><br/><div style="height:60px;line-height:1.45;text-decoration:none !important;display:block; margin: 3px 0pt 0pt; padding: 10px 5px 0; font-style: normal; font-variant: normal; max-height:55px; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
+document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;box-shadow:0 1px 1px rgb(238, 238, 238);border-radius:2px;" src="'+thumburl[r]+'"/><br/><div style="height:60px;line-height:1.45;text-decoration:none !important;display:block; margin: 3px 0pt 0pt; padding: 5px 5px 0; font-style: normal; font-variant: normal; max-height:55px; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
 i++;
 
