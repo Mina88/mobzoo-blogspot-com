@@ -59,7 +59,7 @@ return false;
 
 function printRelatedLabels_thumbs(current) {
 var splitbarcolor;
-if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#DDDDDD";
+if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#ffffff";
 for(var i = 0; i < relatedUrls.length; i++)
 {
 if((relatedUrls[i]==current)||(!relatedTitles[i]))
