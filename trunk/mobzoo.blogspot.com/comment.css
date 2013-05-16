@@ -112,7 +112,7 @@ font-weight:bold;
 {
 #postCommentSubmit
 {
-background-color:#4d90f0;border:1px solid #3079ed;color:#fff;margin:1px 0 0 5px;
+background-color:#000;border:1px solid #3079ed;color:#fff;margin:1px 0 0 5px;
 }
 #postCommentSubmit:focus
 {
@@ -132,7 +132,7 @@ margin:5px 0;/**/width:98%;
 {
 #commentBodyField
 {
-background-color:#292929;border:1px solid #d9d9d9;box-sizing:border-box;color:#222;
+background-color:#000;border:1px solid #d9d9d9;box-sizing:border-box;color:#222;
 display:inline-block;font-family:arial;font-size:13px;margin-left:4px;vertical-align:top;width:100%;-moz-box-sizing:border-box;
 -webkit-box-sizing:border-box;-webkit-border-radius:1px;-webkit-appearance:none;
 }
