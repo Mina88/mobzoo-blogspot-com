@@ -1,4 +1,4 @@
-ovar relatedTitles = new Array();
+var relatedTitles = new Array();
 var relatedTitlesNum = 0;
 var relatedUrls = new Array();
 var thumburl = new Array();
@@ -18,7 +18,7 @@ if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!=""))
 
 }
 
-if(relatedTitles[relatedTitlesNum].length>120) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 120)+"...";
+if(relatedTitles[relatedTitlesNum].length>35) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 35)+"...";
 for (var k = 0; k < entry.link.length; k++) {
 if (entry.link[k].rel == 'alternate') {
 relatedUrls[relatedTitlesNum] = entry.link[k].href;
@@ -59,7 +59,7 @@ return false;
 
 function printRelatedLabels_thumbs(current) {
 var splitbarcolor;
-if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#ffffff";
+if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#DDDDDD";
 for(var i = 0; i < relatedUrls.length; i++)
 {
 if((relatedUrls[i]==current)||(!relatedTitles[i]))
@@ -78,10 +78,10 @@ var i = 0;
 if(relatedTitles.length>0) document.write('<h2>'+relatedpoststitle+'</h2>');
 document.write('<div style="clear: both;"/>');
 while (i < relatedTitles.length && i < 20 && i<maxresults) {
-document.write('<a style="text-decoration:none;padding:0;float:left;');
-if(i!=0) document.write('border-left:solid 0.5px #ffffff;"');
+document.write('<a style="text-decoration:none;padding:5px;float:left;');
+if(i!=0) document.write('border-left:solid 0.5px '+splitbarcolor+';"');
 else document.write('"');
-document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;box-shadow:0 1px 1px rgb(238, 238, 238);border-radius:2px;" src="'+thumburl[r]+'"/><br/><div style="height:60px;line-height:1.45;text-decoration:none !important;display:block; margin: 3px 0pt 0pt; padding: 5px 0 0; font-style: normal; font-variant: normal; max-height:55px; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
+document.write(' href="' + relatedUrls[r] + '"><img style="width:100px;height:100px;border:0px;" src="'+thumburl[r]+'"/><br/><div style="width:72px;padding-left:3px;height:65px;border: 0pt none ; margin: 3px 0pt 0pt; padding: 0pt; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
 i++;
 
@@ -100,3 +100,4 @@ thumburl.splice(0,thumburl.length);
 relatedTitles.splice(0,relatedTitles.length);
 
 }
+
