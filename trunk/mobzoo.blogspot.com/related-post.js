@@ -18,7 +18,7 @@ if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!=""))
 
 }
 
-if(relatedTitles[relatedTitlesNum].length>35) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 35)+"...";
+if(relatedTitles[relatedTitlesNum].length>120) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 120)+"...";
 for (var k = 0; k < entry.link.length; k++) {
 if (entry.link[k].rel == 'alternate') {
 relatedUrls[relatedTitlesNum] = entry.link[k].href;
