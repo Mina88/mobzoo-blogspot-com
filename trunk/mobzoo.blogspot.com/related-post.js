@@ -1,4 +1,4 @@
-190.211.104.178var relatedTitles = new Array();
+var relatedTitles = new Array();
 var relatedTitlesNum = 0;
 var relatedUrls = new Array();
 var thumburl = new Array();
@@ -81,7 +81,7 @@ while (i < relatedTitles.length && i < 20 && i<maxresults) {
 document.write('<a style="text-decoration:none;padding:5px;float:left;');
 if(i!=0) document.write('border-left:solid 0.5px #FFFFFF;"');
 else document.write('"');
-document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;border:0px;" src="'+thumburl[r]+'"/><br/><div style="width:130px;padding-left:3px;height:65px;border: 0pt none;margin: 3px 0pt 0pt;padding: 0pt;font-style: normal;font-variant: normal;font-weight: normal;font-size: 12px;line-height: normal;font-size-adjust: none;font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
+document.write(' href="' + relatedUrls[r] + '"><img style="width:130px;height:130px;border:0px;" src="'+thumburl[r]+'"/><br/><div style="height:65px;border: 0pt none;margin: 3px 0pt 0pt;padding: 0pt;font-style: normal;font-variant: normal;font-weight: normal;font-size: 12px;line-height: normal;font-size-adjust: none;font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
 i++;
 
