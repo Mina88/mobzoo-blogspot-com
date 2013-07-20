@@ -108,7 +108,7 @@ $(function(){
 
 	if(window.hljs){
 
-		$('#post pre:not(.inline-editor pre)').each(function(i, e) {
+		$('.post body:not(.inline-editor pre)').each(function(i, e) {
 
 			var elem = $(this);
 			var type = elem.attr('class') || elem.data('type');
