@@ -1,5 +1,5 @@
 //Released on August 19th August 2009
-//Released by rubel http://learn26.blogspot.com
+//Released by rubel http://noxdo.blogspot.com
 var relatedTitles = new Array();
 var relatedTitlesNum = 0;
 var relatedUrls = new Array();
@@ -102,5 +102,5 @@ thumburl.splice(0,thumburl.length);
 relatedTitles.splice(0,relatedTitles.length);
 
 }
-hljs.initHighlightingOnLoad();
+
 
