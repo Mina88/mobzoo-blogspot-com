@@ -102,37 +102,5 @@ thumburl.splice(0,thumburl.length);
 relatedTitles.splice(0,relatedTitles.length);
 
 }
-$(function(){
-
-	// Syntax highlighting
-
-	if(window.hljs){
-
-		$('.post body:not(.inline-editor pre)').each(function(i, e) {
-
-			var elem = $(this);
-			var type = elem.attr('class') || elem.data('type');
-			type = type.replace('brush:','').replace('js','javascript').replace('plain','no-highlight');
-
-			elem.wrapInner('<code class="'+type+'" />');
-
-			// Show the line numbers
-
-			var lines = elem.text().match(/\n/g);
-			lines = (lines ? lines.length : 0) + 1;
-
-			if(lines > 1){
-
-				var l = '';
-				for(var i=0;i<lines;i++){
-					l+=(i+1)+'\n';
-				}
-
-				elem.attr('data-lines',l);
-			}
-		});
-
-		hljs.tabReplace = '    ';
-		hljs.initHighlightingOnLoad();
-	}
+hljs.initHighlightingOnLoad();
 
