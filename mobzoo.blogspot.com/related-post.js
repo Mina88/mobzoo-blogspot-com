@@ -100,4 +100,6 @@ thumburl.splice(0,thumburl.length);
 relatedTitles.splice(0,relatedTitles.length);
 
 }
-
+SyntaxHighlighter.autoloader(
+  'js jscript javascript css php xml xhtml xslt html  http://noxdo-blogspot-com.googlecode.com/svn/trunk/highlight.min.js');
+  SyntaxHighlighter.all();
