@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Nice Menu : CSS Animation & jQuery Animate</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery.color.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('#menu-jquery li a').hover(
+				
+					function() {
+						
+						$(this).css('padding', '5px 15px')
+								 .animate({'paddingLeft'	: '25px', 
+											 'paddingRight'	: '25px', 
+											 'backgroundColor':'rgba(0,0,0,0.5)'}, 
+											 'fast');
+					}, 
+					
+					function() {
+						
+						$(this).css('padding', '5px 25px')
+								 .animate({'paddingLeft'	: '15px', 
+								 			'paddingRight'		: '15px', 
+								 			'backgroundColor' :'rgba(0,0,0,0.2)'}, 
+								 			'fast');
+				
+				}).mousedown(function() {
+			
+					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.1)'}, 'fast');
+
+				}).mouseup(function() {
+				
+					$(this).animate({'backgroundColor': 'rgba(0,0,0,0.5)'}, 'fast');
+				});				
+			});
+			
+		</script>
+</head>
+<body>
+<div id="container">
+	<span class="title">Using Pure CSS Animation</span>
+	<ul id="menu-css">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	
+	<span class="title">Using jQuery Animation</span>
+	<ul id="menu-jquery">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	
+	<span class="title">More script and css style
+: <a href="http://www.htmldrive.net/" title="HTML DRIVE - Free DHMTL Scripts,Jquery plugins,Javascript,CSS,CSS3,Html5 Library">www.htmldrive.net </a></span>
+</div>
+</body>
