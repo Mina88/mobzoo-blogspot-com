@@ -78,8 +78,8 @@ var i = 0;
 if(relatedTitles.length>0) document.write('<h2>'+relatedpoststitle+'</h2>');
 document.write('<div style="clear: both;"/>');
 while (i < relatedTitles.length && i < 20 && i<maxresults) {
-document.write('<a style="text-decoration:none;padding:5px;float:left;');
-if(i!=0) document.write('border-left:solid 0.5px #FFFFFF;"');
+document.write('<a style="text-decoration:none;');
+if(i!=0) document.write('"');
 else document.write('"');
 document.write(' href="' + relatedUrls[r] + '"><img src="'+thumburl[r]+'"/><br/><div style="height:65px;border: 0pt none;margin: 3px 0pt 0pt;padding: 0pt;font-style: normal;font-variant: normal;font-weight: normal;font-size: 12px;line-height: normal;font-size-adjust: none;font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
