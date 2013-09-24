@@ -1,5 +1,3 @@
-//Released on August 19th August 2009
-//Released by rubel http://noxdo.blogspot.com
 var relatedTitles = new Array();
 var relatedTitlesNum = 0;
 var relatedUrls = new Array();
@@ -16,11 +14,11 @@ catch (error){
 
 s=entry.content.$t;a=s.indexOf("<img");b=s.indexOf("src=\"",a);c=s.indexOf("\"",b+5);d=s.substr(b+5,c-b-5);
 if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!=""))
-{thumburl[relatedTitlesNum]=d;} else {if(typeof(defaultnoimage) !== 'undefined') thumburl[relatedTitlesNum]=defaultnoimage; else thumburl[relatedTitlesNum]="http://1.bp.blogspot.com/_u4gySN2ZgqE/SosvnavWq0I/AAAAAAAAArk/yL95WlyTqr0/s400/noimage.png";}
+{thumburl[relatedTitlesNum]=d;} else {if(typeof(defaultnoimage) !== 'undefined') thumburl[relatedTitlesNum]=defaultnoimage; else thumburl[relatedTitlesNum]="http://3.bp.blogspot.com/-PpjfsStySz0/UF91FE7rxfI/AAAAAAAACl8/092MmUHSFQ0/s1600/no_image.jpg";}
 
 }
 
-if(relatedTitles[relatedTitlesNum].length>35) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 35)+"...";
+if(relatedTitles[relatedTitlesNum].length>120) relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0, 120)+"...";
 for (var k = 0; k < entry.link.length; k++) {
 if (entry.link[k].rel == 'alternate') {
 relatedUrls[relatedTitlesNum] = entry.link[k].href;
@@ -61,7 +59,7 @@ return false;
 
 function printRelatedLabels_thumbs(current) {
 var splitbarcolor;
-if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#d4eaf2";
+if(typeof(splittercolor) !== 'undefined') splitbarcolor=splittercolor; else splitbarcolor="#FFFFFF";
 for(var i = 0; i < relatedUrls.length; i++)
 {
 if((relatedUrls[i]==current)||(!relatedTitles[i]))
@@ -81,9 +79,9 @@ if(relatedTitles.length>0) document.write('<h2>'+relatedpoststitle+'</h2>');
 document.write('<div style="clear: both;"/>');
 while (i < relatedTitles.length && i < 20 && i<maxresults) {
 document.write('<a style="text-decoration:none;padding:5px;float:left;');
-if(i!=0) document.write('border-left:solid 0.5px '+splitbarcolor+';"');
+if(i!=0) document.write('border-left:solid 0.5px #FFFFFF;"');
 else document.write('"');
-document.write(' href="' + relatedUrls[r] + '"><img style="width:72px;height:72px;border:0px;" src="'+thumburl[r]+'"/><br/><div style="width:72px;padding-left:3px;height:65px;border: 0pt none ; margin: 3px 0pt 0pt; padding: 0pt; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
+document.write(' href="' + relatedUrls[r] + '"><img src="'+thumburl[r]+'"/><br/><div style="height:65px;border: 0pt none;margin: 3px 0pt 0pt;padding: 0pt;font-style: normal;font-variant: normal;font-weight: normal;font-size: 12px;line-height: normal;font-size-adjust: none;font-stretch: normal;">'+relatedTitles[r]+'</div></a>');
 
 i++;
 
@@ -102,5 +100,3 @@ thumburl.splice(0,thumburl.length);
 relatedTitles.splice(0,relatedTitles.length);
 
 }
-
-
